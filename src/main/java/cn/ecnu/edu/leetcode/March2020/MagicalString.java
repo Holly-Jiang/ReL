@@ -34,19 +34,15 @@ public class MagicalString {
             return 0;
         }
         int[] num1=new int[n+3];
-        int []num2=new int[n+3];
         num1[0]=1;
         num1[1]=2;
         num1[2]=2;
-        num2[0]=1;
-        num2[1]=2;
         for (int i=3,j=2;i<n;i++){
-            num2[j]=num1[j];
             int mult=2;
             if (num1[i-1]==2){
                 mult=1;
             }
-            if(num2[j]==2){
+            if(num1[j]==2){
                 num1[i]=mult;
                 i++;
             }
